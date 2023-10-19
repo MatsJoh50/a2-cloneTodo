@@ -2,75 +2,73 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     * {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
-  }
-  
-  body {
+}
+
+body {
     background: linear-gradient(to bottom, #ffcccc 0%, #ff9999 100%);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-  
+
     height: 100vh;
     padding: 0%;
-  
+
     overflow: hidden;
-  }
-  
-  section {
+}
+
+section {
     display: flex;
-  
+
     flex-direction: column;
     background-color: white;
-  
+
     align-self: initial;
     align-content: center;
     align-items: center;
-  
+
     /* margin-top: 10px; */
     width: 600px;
     min-height: 300px;
-  
+
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, .4);
-  
+
     animation: sectionBounce 600ms;
-  
-  }
-  
-  section>h1 {
+
+}
+
+section>h1 {
     font-size: 50px;
     color: black;
     margin: 10px 0px 10px 0px;
     opacity: 0;
-    transition: 150ms;
-  }
-  
-  #counter {
+    transition: opacity 150ms;
+}
+
+#counter {
     margin: 0px 0px 20px 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
-    transition: 150ms;
+    transition: opacity 150ms;
     opacity: 0;
-  
-  
-  }
-  
-  
-  #inputBox {
+
+
+}
+
+
+#inputBox {
     align-self: initial;
     display: flex;
     flex-direction: column;
-    transition: 150ms;
-  
-  
-  }
-  
-  
-  
-  #todoInput {
+    transition: opacity 150ms;
+}
+
+
+
+#todoInput {
     border: 1px solid;
     border-color: lightgray;
     border-radius: 2px;
@@ -78,40 +76,44 @@
     font-size: larger;
     height: 25px;
     opacity: 0;
-    transition: 150ms;
-  }
-  
-  #todoInput:focus{
-    border: 1px solid blue;
-  }
-  
-  #addTodoButton {
+    transition: opacity 150ms;
+    outline: none;
+}
+
+#todoInput:focus {
+    border-color: blue;
+}
+
+#addTodoButton {
     font-size: larger;
     padding: 0px 8px;
-    background-color: rgba(211, 211, 211, 0.226);
+    background-color: rgb(211, 211, 211);
     border: 1px solid lightgray;
     border-radius: 2px;
     height: 29px;
     opacity: 0;
-    transition: 150ms;
-  
-  
-  }
-  
-  ul {
+    transition: opacity 150ms;
+
+}
+#addTodoButton:hover{
+    background-color: rgb(196, 196, 196);
+
+}
+
+ul {
     margin-top: -20px;
     padding-bottom: 20px;
-  }
-  
-  li {
+}
+
+li {
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
     width: 250px;
-  }
-  
-  .trashcan {
+}
+
+.trashcan {
     justify-self: center;
     justify-content: center;
     color: rgba(128, 128, 128, 0.295);
@@ -120,14 +122,15 @@
     padding-top: 7px;
     margin-left: 15px;
     transition: color 300ms;
-  }
-  .trashcan:hover{
+}
+
+.trashcan:hover {
     color: black;
     cursor: pointer;
-  
-  }
-  
-  .todoListItem {
+
+}
+
+.todoListItem {
     align-items: center;
     margin: 0;
     padding: 0;
@@ -136,37 +139,37 @@
     font-size: x-large;
     width: fit-content;
     transition: color 500ms;
-  
-  }
-  
-  .todoListItem:hover {
+
+}
+
+.todoListItem:hover {
     text-decoration: line-through;
     cursor: pointer;
-  }
-  
-  .todoInsertAni {
+}
+
+.todoInsertAni {
     animation-name: todoItemsInsert;
     animation-duration: 0.3s;
-  
-  }
-  
-  .taskDone {
+
+}
+
+.taskDone {
     color: gray;
     text-decoration: line-through;
-  
-  
-  
-  }
-  
-  .compAni {
+
+
+
+}
+
+.compAni {
     /* animation-name: compleated;
     animation-duration: 3s;
     animation-iteration-count: 1; */
     opacity: 50%;
     text-decoration: line-through;
-  }
-  
-  .error {
+}
+
+.error {
     animation-name: errorAni;
     animation-duration: 0.3s;
     animation-iteration-count: 3;
@@ -174,61 +177,61 @@
     font-style: italic;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  @keyframes sectionBounce {
+}
+
+@keyframes sectionBounce {
     0% {
-      opacity: 0;
-      transform: translateY(-110%);
+        opacity: 0;
+        transform: translateY(-110%);
     }
-  
+
     60% {
-      transform: translateY(15.06%);
-  
+        transform: translateY(15.06%);
+
     }
-  
+
     100% {
-      transform: translateY(0%);
+        transform: translateY(0%);
     }
-  
-  
-  }
-  
-  @keyframes todoItemsInsert {
+
+
+}
+
+@keyframes todoItemsInsert {
     0% {
-      opacity: 0;
-      transform: translateY(100.06%);
+        opacity: 0;
+        transform: translateY(100.06%);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateY(0%);
+        opacity: 1;
+        transform: translateY(0%);
     }
-  
-  }
-  
-  @keyframes errorAni {
+
+}
+
+@keyframes errorAni {
     0% {
-      opacity: 0%;
+        opacity: 0%;
     }
-  
+
     100% {
-      opacity: 100%;
+        opacity: 100%;
     }
-  
-  }
-  
-  @keyframes completed {
+
+}
+
+@keyframes completed {
     0% {
-      text-decoration: line-through;
-  
-      opacity: 100%;
-  
+        text-decoration: line-through;
+
+        opacity: 100%;
+
     }
-  
+
     100% {
-      text-decoration: line-through;
-  
-      opacity: 50%;
+        text-decoration: line-through;
+
+        opacity: 50%;
     }
-  }
+}
